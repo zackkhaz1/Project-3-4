@@ -2,7 +2,7 @@
 $servername = "mysql.eecs.ku.edu";
 $username = "z181k532";
 $password = "jo9aiyaa";
-$dbName = "z181k532";
+$dbName = "zack_khaz";
 
 $connect = new mysqli($servername, $username, $password, $dbName);
 if($connect->connect_error)
