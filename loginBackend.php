@@ -1,6 +1,6 @@
 <?php
 $servername = "mysql.eecs.ku.edu";
-$username = "z181k532";
+$username = "zack_khaz";
 $password = "jo9aiyaa";
 $dbName = "zack_khaz";
 
@@ -9,18 +9,14 @@ if($connect->connect_error)
   {
     die("Connection failed: " . $connect->connect_error);
   }
-echo "Connected successfully";
+else {
+echo "Connected successfully <br>";
+}
 
-$sql = "CREATE TABLE usernames (
-  ID int AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  username varchar(255) NOT NULL,
-  password varchar(255) NOT NULL,
-)";
 
-$webUser = $connect->mysqli_real_escape_string($_REQUEST['username']);
-$webPass = $connect->mysqli_real_escape_string($_REQUEST['password']);
-
-$sql = "INSERT INTO usernames (username, password) VALUES ('$webUser','$webPass')";
+$user = $_POST["username"];
+$pass = $_POST["password"];
+$sql = "INSERT INTO usernames (username, password) VALUES ('$user', '$pass')";
 if($connect->query($sql) === true)
   {
     echo "Records inserted";
