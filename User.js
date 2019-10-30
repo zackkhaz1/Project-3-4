@@ -5,12 +5,14 @@ class User
   password;
   onTeam;
   team;
+  record; //integer array where record[0] is the wins and record[1] is the losses 
 
   constructor(username, password)
   {
     this.userName = username;
     this.password = password;
     this.onTeam = false;
+    this.record = [0,0];
   }
 
   get userName()
@@ -52,5 +54,14 @@ class User
     return this.onTeam;
   }
 
+  addWin()
+  {
+    this.record[0]++;
+  }
+
+  addLoss()
+  {
+    this.record[1]++;
+  }
 
 }
