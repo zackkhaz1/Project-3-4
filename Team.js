@@ -6,7 +6,7 @@ class Team
   record; //integer array where record[0] is the wins and record[1] is the losses
 
 
-  /**
+  /*
   * constructor
   * @pre none
   *	@param string name for the team
@@ -21,7 +21,7 @@ class Team
     this.record = [0,0];
   }
 
-  /**
+  /*
   * @pre none
   *	@param none
   *	@post get the teams name
@@ -32,7 +32,7 @@ class Team
     return this.name;
   }
 
-  /**
+  /*
   * @pre none
   *	@param string team name
   *	@post set the teams name
@@ -43,7 +43,7 @@ class Team
     this.name = name;
   }
 
-  /**
+  /*
   * @pre none
   *	@param none
   *	@post get the number of players on the team
@@ -54,7 +54,7 @@ class Team
     return this.numPlayers;
   }
 
-  /**
+  /*
   * @pre none
   *	@param integer value for number of players on the team
   *	@post set the number of players on the team
@@ -65,7 +65,7 @@ class Team
     this.numPlayers = numPlayers;
   }
 
-  /**
+  /*
   * @pre none
   *	@param User players name
   *	@post adds a User object to the team
@@ -77,7 +77,7 @@ class Team
     this.numPlayers++;
   }
 
-  /**
+  /*
   * @pre none
   *	@param User players name
   *	@post removes a User object from the team
@@ -88,7 +88,7 @@ class Team
     this.players.splice(this.players.indexOf(playerName),1);
   }
 
-  /**
+  /*
   * @pre none
   *	@param none
   *	@post adds a win to the win column
@@ -99,7 +99,7 @@ class Team
     this.record[0]++;
   }
 
-  /**
+  /*
   * @pre none
   *	@param none
   *	@post adds a loss to the loss column
