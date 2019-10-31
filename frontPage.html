@@ -1,29 +1,27 @@
 <html>
 
 <head>
-  <script type="text/javascript"
-            src="Team.js">
-     </script>
-   <script type="text/javascript"
-              src="User.js">
-      </script>
-  <link rel="stylesheet"
-  					href="styles.css">
+  <script type="text/javascript" src="Team.js">
+  </script>
+  <script type="text/javascript" src="User.js">
+  </script>
+  <link rel="stylesheet" href="styles.css">
   <title> SquadUp Basketball </title>
 </head>
+
 <body>
   <h1> SquadUp </h1>
   <div class="topnav">
-	  <a href="#">Home</a>
-		<a href="#">Login</a>
-	  <a href="#">Check Scores</a>
-    </div>
+    <a href="#">Home</a>
+    <a href="#">Login</a>
+    <a href="#">Check Scores</a>
+  </div>
   <hr>
-
   <div>
     <form action="loginBackend.php" method="post">
-      <input type="text" id="username" name="username" placeholder="Username"> <br>
-      <input type="password" id="password" name="password" placeholder="password"> <br>
-      <input type="submit" id="submitInfo" value="Log in" class="button">
+      <input type="text" required id="username" name="username" placeholder="Username"> <br>
+      <input type="password" required id="password" name="password" placeholder="Password"> <br>
+      <input type="submit" id="submitInfo" value="Log in" class="button" onsubmit="location.href='profile.html'"> </button>
+    </form>
 
 </html>

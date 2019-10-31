@@ -13,7 +13,6 @@ else {
 echo "Connected successfully <br>";
 }
 
-
 $user = $_POST["username"];
 $pass = $_POST["password"];
 $sql = "INSERT INTO usernames (username, password) VALUES ('$user', '$pass')";
