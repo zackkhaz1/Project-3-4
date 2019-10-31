@@ -8,7 +8,7 @@ class User
   record; //int array where record[0] is the wins and record[1] is the losses
 
 
-  /**
+  /*
   * constructor
   * @pre none
   *	@param string username for the user
@@ -24,7 +24,7 @@ class User
     this.record = [0,0];
   }
 
-  /**
+  /*
   * @pre none
   *	@param none
   *	@post get the user's name
@@ -35,7 +35,7 @@ class User
     return this.userName;
   }
 
-  /**
+  /*
   * @pre none
   *	@param string user name
   *	@post set the user's name
@@ -46,7 +46,7 @@ class User
     this.userName = username;
   }
 
-  /**
+  /*
   * @pre none
   *	@param none
   *	@post get the user's password
@@ -57,7 +57,7 @@ class User
     return this.password;
   }
 
-  /**
+  /*
   * @pre none
   *	@param string user password
   *	@post set the user's password
@@ -68,7 +68,7 @@ class User
     this.password = password;
   }
 
-  /**
+  /*
   * @pre none
   *	@param none
   *	@post get the user's team
@@ -79,7 +79,7 @@ class User
     return this.team;
   }
 
-  /**
+  /*
   * @pre none
   *	@param Team user team
   *	@post set the user's team
@@ -91,7 +91,7 @@ class User
     this.onTeam = true;
   }
 
-  /**
+  /*
   * @pre none
   *	@param none
   *	@post bool check if user is on a team
@@ -102,7 +102,7 @@ class User
     return this.onTeam;
   }
 
-  /**
+  /*
   * @pre none
   *	@param none
   *	@post adds a win to the win column
@@ -113,7 +113,7 @@ class User
     this.record[0]++;
   }
 
-  /**
+  /*
   * @pre none
   *	@param none
   *	@post adds a loss to the loss column
