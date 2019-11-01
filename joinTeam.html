@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title> Join A Team! </title>
+</head>
+
+<body>
+  <center>
+    <h1> Join a Team! </h1>
+  </center>
+  <div class="topnav">
+  <a href="profile.html">My Profile</a>
+  <a href="joinTeam.html"class="active">Join a team</a> <!-- this should redirect to another html page with the appropriate info and JS functions to join team-->
+  <a href="userTeam.html">View your current team</a> <!-- this should redirect to another html page with the appropriate info -->
+  <a href="joinQueue.html"> Join a queue </a> <!-- this should redirect to another html page with the appropriate info and JS functions to join court queue -->
+</div>
+  <form action="joinTeam.php" method="post">
+    Team ID:<br>
+    <input type="text" required id="teamId" name="teamId"><br>
+    <input type="submit" id="submitInfo" value="Join Team" class="button"> </button>
+  </form><br><br><br><br>
+  <form action="createTeam.php" method="post">
+    Dont Have a Team to Join? Create Your Own! :<br>
+    <br>Team Name:<br>
+    <input type="text" required id="teamName" name="teamName"><br>
+    <input type="submit" value="Create Team!" class="button"> </button>
+  </form>
+</body>
+</html>
