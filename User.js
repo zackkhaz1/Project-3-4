@@ -125,3 +125,11 @@ class User
   }
 
 }
+
+
+function createUser()
+  {
+    var name = document.getElementById(newUsername).value;
+    var pass = document.getElementById(newPassword).value;
+    let user = new User(name, pass);
+  }
