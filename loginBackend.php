@@ -9,16 +9,14 @@ if($connect->connect_error)
   {
     die("Connection failed: " . $connect->connect_error);
   }
-else {
-echo "Connected successfully <br>";
-}
+
 
 $user = $_POST["username"];
 $pass = $_POST["password"];
 $sql = "INSERT INTO usernames (username, password) VALUES ('$user', '$pass')";
 if($connect->query($sql) === true)
   {
-    echo "Records inserted";
+      header('Location: profile.html');
   }
 else {
   echo "Could not insert " . $connect->error;
