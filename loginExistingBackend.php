@@ -18,7 +18,7 @@ $pass = $_POST["password"];
 $userInfo = mysqli_query($connect,"SELECT * FROM usernames WHERE username = '$user'");
 $row = mysqli_fetch_array($userInfo);
 if($user == $row['username']){
-  if($pass = $row['password']){
+  if($pass == $row['password']){
       header('Location: profile.html'); //redirect to profile page after successful account creation
       exit;
   }
