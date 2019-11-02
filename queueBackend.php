@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "mysql.eecs.ku.edu";
 $username = "zack_khaz";
 $password = "jo9aiyaa";
@@ -9,12 +10,14 @@ if($connect->connect_error)
   {
     die("Connection failed: " . $connect->connect_error);
   }
-else {
-echo "Connected successfully <br>";
-}
-$teamId = $_GET['teamId'];
-//should add player to team specified by team ID code in SQL database table
-//should display team with members and their record
+  echo "<html><head>";
+  echo'<link rel="stylesheet" href="styles.css">';
+  echo '<title> Your Local Queue </title>';
+echo "</head>";
+
+//should add team to queue table in SQL database
+//Should generate a html table of all teams in queue from SQL queue table
+echo "</html>";
 $connect->close();
 
  ?>
