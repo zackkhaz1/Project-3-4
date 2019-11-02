@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "mysql.eecs.ku.edu";
 $username = "zack_khaz";
 $password = "jo9aiyaa";
@@ -13,12 +14,13 @@ if($connect->connect_error)
 
 $user = $_POST["username"];
 $pass = $_POST["password"];
+$_SESSION['username'] = $user;
+$_SESSION['password'] = $pass;
 $userInfo = mysqli_query($connect,"SELECT * FROM usernames WHERE username = '$user'");
 $row = mysqli_fetch_array($userInfo);
 if($user == $row['username']){
   if($pass == $row['password']){
-      header('Location: profile.html'); //redirect to profile page after successful account creation
-      exit;
+      header('Location: profile.php');
   }
 }
 else if($user != $row['username'] || $pass != $row['password']) {
