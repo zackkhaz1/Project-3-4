@@ -19,6 +19,7 @@ $_SESSION['password'] = $pass;
 $sql = "INSERT INTO usernames (username, password) VALUES ('$user', '$pass')";
 if($connect->query($sql) === true)
   {
+      
       header('Location: profile.php');
   }
 else {
